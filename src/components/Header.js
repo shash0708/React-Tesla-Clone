@@ -1,7 +1,8 @@
 import React,{useState} from 'react';
 import styled from "styled-components";
-import MenuIcon from '@material-ui/icons/Menu';
-import CloseIcon from '@material-ui/icons/Close';
+import "./Header.css"
+// import MenuIcon from '@material-ui/icons/Menu';
+// import CloseIcon from '@material-ui/icons/Close';
 // import {selectCars} from '../features/car/carSlice';
 // import {useSelector} from 'react-redux';
 export default function Header() {
@@ -13,11 +14,11 @@ export default function Header() {
         <img src="/images/logo.svg" alt=""/>
       </a>
       <Buttons>
-      <Menu style={{fontFamily: 'Ubuntu, sans-serif'}}>
+      <Menu className='nav-link' style={{fontFamily: 'Ubuntu, sans-serif'}}>
        <p className='py-1 px-3 hover:rounded hover:bg-black/5'><a href="/">Model 3</a></p>
-       <p><a href="/">Model X</a></p>
-       <p><a href="/">Model S</a></p>
-       <p><a href="/">Model Y</a></p>
+       <p><a href="/" className='one' >Model X</a></p>
+       <p><a href="/"  className='two'>Model S</a></p>
+       <p><a href="/"  className='three'>Model Y</a></p>
 
       </Menu>
       </Buttons>
@@ -26,12 +27,13 @@ export default function Header() {
         <div>       
           <a href="/">Account</a> 
         </div>
-
-         <CustomMenuIcon onClick={()=>setBurgerStatus(true)}/> 
+       <p onClick={()=>setBurgerStatus(true)} ><i class="fa-solid fa-bars" ></i></p>
+         {/* <CustomMenuIcon onClick={()=>setBurgerStatus(true)}/>  */}
       </RightMenu>
       <BurgerNav show={burgerStatus}>
              <CloseWrapper>
-                  <CustomClose onClick={()=>setBurgerStatus(false)}/>
+              <p  onClick={()=>setBurgerStatus(false)} ><i class="fa-solid fa-circle-xmark"></i></p>
+                  {/* <CustomClose onClick={()=>setBurgerStatus(false)}/> */}
              </CloseWrapper>
              <li><a href='/'>Existing Inventory</a></li>
              <li><a href='/'>Used Inventory</a></li>
@@ -62,6 +64,8 @@ const Container = styled.div`
   top: 0;
   left: 0;
   right: 0 
+
+  
  
 `
 
@@ -79,7 +83,7 @@ const Menu = styled.div`
     padding: 0 10px;
     flex-wrap: nowrap;
   }
- 
+
 
   @media (max-width: 768px) {
     display: none;
@@ -89,6 +93,7 @@ const Menu = styled.div`
 const RightMenu = styled.div`
   display: flex;
   align-items: center;
+  cursor:pointer;
 
   a {
     font-weight: 600;
@@ -97,9 +102,9 @@ const RightMenu = styled.div`
   }
 `;
 
-const CustomMenuIcon = styled(MenuIcon)`
-  cursor: pointer;
-`
+// const CustomMenuIcon = styled(MenuIcon)`
+//   cursor: pointer;
+// `
 const BurgerNav = styled.div`
     position: fixed;
     top:0;
@@ -127,14 +132,15 @@ const BurgerNav = styled.div`
 
  
 `
-const CustomClose = styled(CloseIcon)`
-              cursor:pointer;
+// const CustomClose = styled(CloseIcon)`
+//               cursor:pointer;
   
  
-`
+// `
 const CloseWrapper = styled.div`
         display:flex;
         justify-content:flex-end;
+        cursor:pointer;
 
 
 
