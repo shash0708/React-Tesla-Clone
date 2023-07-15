@@ -27,12 +27,12 @@ export default function Header() {
         <div>       
           <a href="/">Account</a> 
         </div>
-       <p onClick={()=>setBurgerStatus(true)} ><i class="fa-solid fa-bars" ></i></p>
+       <p onClick={()=>setBurgerStatus(true)} ><i className="fa-solid fa-bars" ></i></p>
          {/* <CustomMenuIcon onClick={()=>setBurgerStatus(true)}/>  */}
       </RightMenu>
       <BurgerNav show={burgerStatus}>
              <CloseWrapper>
-              <p  onClick={()=>setBurgerStatus(false)} ><i class="fa-solid fa-circle-xmark"></i></p>
+              <p  onClick={()=>setBurgerStatus(false)} ><i className="fa-solid fa-circle-xmark"></i></p>
                   {/* <CustomClose onClick={()=>setBurgerStatus(false)}/> */}
              </CloseWrapper>
              <li><a href='/'>Existing Inventory</a></li>
