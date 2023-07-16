@@ -1,9 +1,6 @@
 import React,{useState} from 'react';
 import styled from "styled-components";
 import "./Header.css"
-// import MenuIcon from '@material-ui/icons/Menu';
-// import CloseIcon from '@material-ui/icons/Close';
-// import {selectCars} from '../features/car/carSlice';
 // import {useSelector} from 'react-redux';
 export default function Header() {
   const [burgerStatus,setBurgerStatus] = useState(false);
@@ -28,12 +25,10 @@ export default function Header() {
           <a href="/">Account</a> 
         </div>
        <p onClick={()=>setBurgerStatus(true)} ><i className="fa-solid fa-bars" ></i></p>
-         {/* <CustomMenuIcon onClick={()=>setBurgerStatus(true)}/>  */}
       </RightMenu>
       <BurgerNav show={burgerStatus}>
              <CloseWrapper>
               <p  onClick={()=>setBurgerStatus(false)} ><i className="fa-solid fa-circle-xmark"></i></p>
-                  {/* <CustomClose onClick={()=>setBurgerStatus(false)}/> */}
              </CloseWrapper>
              <li><a href='/'>Existing Inventory</a></li>
              <li><a href='/'>Used Inventory</a></li>
@@ -102,9 +97,7 @@ const RightMenu = styled.div`
   }
 `;
 
-// const CustomMenuIcon = styled(MenuIcon)`
-//   cursor: pointer;
-// `
+
 const BurgerNav = styled.div`
     position: fixed;
     top:0;

@@ -1,7 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import { StyleSheetManager } from 'styled-components';
-// import isPropValid from '@emotion/is-prop-valid';
 import Fade from 'react-reveal';
 
 function Section(props) {
