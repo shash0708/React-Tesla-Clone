@@ -81,27 +81,3 @@ const Container =styled.div`
   // }
 `
 
-// const Footer = styled.div`
-//     display:flex;
-//     flex-direction:column;
-//     a{
-//       display:flex;
-//       justify-content:space-between;
-//       align-items:flex-start;
-//       flex-direction:column;
-//       text-align:left
-//       marign:12px;
-
-//     }
-// `
-
-  // li:not(:last-child)::before {
-  //   content: '';
-  // //   position: absolute;
-  // //   top: 20%;
-  // //   right: -3px; /* Adjust this value to control the spacing */
-  // //   transform: translateY(-50%);
-  // //   width: 10px; /* Adjust this value to control the spacing */
-  // //   height: 80%; /* Adjust this value to control the spacing */
-  // // /* Adjust the color if needed */
-  // }

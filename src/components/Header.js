@@ -1,10 +1,8 @@
 import React,{useState} from 'react';
 import styled from "styled-components";
-import "./Header.css"
-// import {useSelector} from 'react-redux';
 export default function Header() {
   const [burgerStatus,setBurgerStatus] = useState(false);
-  // const cars= useSelector(selectCars)
+
   return (
     <Container>
       <a href="/">
@@ -125,11 +123,7 @@ const BurgerNav = styled.div`
 
  
 `
-// const CustomClose = styled(CloseIcon)`
-//               cursor:pointer;
-  
- 
-// `
+
 const CloseWrapper = styled.div`
         display:flex;
         justify-content:flex-end;
